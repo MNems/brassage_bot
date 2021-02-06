@@ -1,6 +1,6 @@
 import os
 import discord
-
+from dotenv import load_dotenv
 
 class BrassageBot(discord.Client):
 
@@ -17,5 +17,6 @@ class BrassageBot(discord.Client):
 
 
 if __name__ == '__main__':
-    brassage_bot = BrassageBot()
-    brassage_bot.run("ODA3NjIwODQ5MTI5NDg4Mzk1.YB6phw.GvUVf_ETtCgBU2UcYg-xF3AKRFs")
+  load_dotenv()
+  brassage_bot = BrassageBot()
+  brassage_bot.run(os.getenv("DISCORD_TOKEN"))
